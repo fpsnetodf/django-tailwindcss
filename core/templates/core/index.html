@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/tailwind.css' %}">
+    <title>TailWindCss</title>
+</head>
+<body class="bg-gradient-to-r from-violet-100 to-fuchsia-600">
+    <h1 class="text-red-300 mx-8 my-8 text-4xl bg-teal-300 max-w-screen-4xl text-center py-3 hover:ring-2 hover:ring-red-300 rounded-tl-3xl rounded-br-3xl" >Minha Pagina Django com Tailwindcss</h1>
+    <form action="" method="get">
+        <label class="text-yellow-500 ml-4 text-2xl" for="nome">Nome: </label>
+        <input type="text" id="input_nome" name="nome" placeholder="Digite seu nome" class="placeholder:text-purple-300 placeholder:p-4  placeholder:rounded text-red-300 px-6" >
+        <br>
+        <button id="meubutton" type="submit" class="mx-8 text-blue-500 bg-green-300 hover:ring-4 hover:text-gray-400 rounded px-4 py-2 my-2 text-xl">Enviar</button>
+    </form>
+    <div id="texto">
+        {% block conteudo %}
+          
+        {% endblock conteudo %}
+        
+    </div>
+    <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+    
+    
+
+</html>
